@@ -31,7 +31,7 @@ class CheckFile(object):
 class CreateFile():
 
 	def getFilename(self):
-		filename = raw_input("Enter the File name:")
+		filename = raw_input("Enter the File/Directory name:")
 		print "1.Directory\n2.File"
 		dic_type = {'1':'dirs','2':'files'}
 		filetype = raw_input("Enter the File type:")
