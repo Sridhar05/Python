@@ -13,9 +13,13 @@ def base_converter(number, base):
 
 	while number:
 		remainder = number % base
-		s.push(str(remainder))
+		s.push(remainder)
 		number /= base
 
-	return s.stack
+	result = ''
+	while not s.is_empty():
+		result += digits[s.pop()]
 
-print base_converter(42, 8)
+	return result
+
+print base_converter(25, 2)
