@@ -13,7 +13,7 @@ def paranthese_checker(input_string):
 	balanced = True
 
 	for symbol in input_string:
-		if symbol == '(':
+		if symbol in ['(','{','[']:
 			s.push(symbol)
 		else:
 			if s.is_empty():
@@ -24,5 +24,5 @@ def paranthese_checker(input_string):
 	return True if s.is_empty() and balanced else False
 
 
-print paranthese_checker('(()')
+print paranthese_checker('[{()]')
 	
